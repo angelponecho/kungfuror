@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>KungFuror</title>
+
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+
+
+      <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="assets/css/listas.css">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/js/fancybox/jquery.fancybox.css" rel="stylesheet" />
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+		
+	<!-- Menu -->
+	<nav class="menu" id="theMenu">
+		<div class="menu-wrap">
+			<h1 class="logo"><a href="index.html#home">KUNG FUROR</a></h1>
+			<i class="fa fa-times menu-close"></i>
+			<a href="#home" class="smoothScroll">CREAR LISTA</a>
+			<a href="#about" class="smoothScroll">MI LISTA</a>
+            <a href="#about2" class="smoothScroll">CRONO</a>
+
+		</div>
+		
+		<!-- Menu button -->
+		<div id="menuToggle"><i class="fa fa-bars"></i></div>
+	</nav>
+
+	<section id="home" name="home"></section>
+	<div id="headerwrap">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <img src="assets/img/logo.png" alt="kungfuror" >
+                    </div>
+                </div><!-- --/row ---->
+            </div><!-- --/container ---->
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 ">
+                    <h1>ELIGE EJERCIOS</h1>
+                    <div class="well well-form">
+                        <div id="divEjemplo">
+                            <div  id="divControles" class="row">
+  										<div class="col-md-9">
+                                        	<label for="liNombre">Ejercicio</label>
+                                            <select class="form-control" id="liNombre">
+                                            	<option value="Calentamiento">Calentamiento</option>
+                                                <option value="Lucha">Lucha</option>
+                                                <option value="Patada Frontal">Patada Frontal</option>
+                                                <option value="Patada Lateral">Patada Lateral</option>
+                                                <option value="Patada Abanico">Patada Abanico</option>
+                                                <option value="Patada Trasera">Patada Trasera</option>
+                                                <option value="Punos">Puños</option>
+                                                <option value="Mixto">Mixto</option>
+                                                <option value="Descanso">Descanso</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="txtTiempo">Tiempo: </label>
+                                            <input class="form-control" id="txtTiempo" maxlength="2" size="2" onKeyPress="return soloNumeros(event);" value="1">
+                                		</div>  
+
+                            </div>
+
+
+                            <label for="total"></label>
+
+                            <div class="row clsDerecha ">
+                                  <div class="col-md-3"><input type="button"  class="btn btn-success" value="Agregar" id="btnAgregar"></div>
+                                  <div class="col-md-3"><a href="#about2" class="smoothScroll"><input  type="button" class="btn btn-primary" value="Empezar" id="btnEmpezar"/></a></div>
+                                  <div class="col-md-3"><input type="button"  class="btn btn-info" value="Pausa" id="btnPausa"/></div>
+								  <div class="col-md-3"><input  type="button" class="btn btn-danger" value="Eliminar lista" id="btnEliminarTodo"/></div>
+                            </div>
+
+                        </div>
+                    </div>
+				</div>
+			</div><! --/row -->
+		</div><! --/container -->
+	</div><! --/headerwrap -->
+	
+	<section id="about" name="about"></section>
+	<div id="aboutwrap">
+		<div class="container">
+			<div class="row">
+                <div class="col-md-6 col-md-offset-3 " style="text-align: center">
+
+                    <h1>LISTA DE EJERCICIOS</h1>
+                    <div class="well well-list">
+                        <div id="divLista">
+
+                        </div>
+                    </div>
+                </div><!-- /col-->
+
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /aboutwrap -->
+
+    <section id="about2" name="about2"></section>
+	<div class="sep about" data-stellar-background-ratio="0.5">
+        <div  class="container " >
+            <div id="divContenedor" >
+                <h1>DALE!!!</h1>
+
+                    <div class="cronometro" style="margin-top:40px"></div>
+                    <div id="barra" ></div>
+
+            </div><!-- /col-->
+        </div><!-- /container -->
+	</div>
+
+
+
+
+	
+	<! -- SERVICE SECTION -->
+	<section id="contact" name="contact"></section>
+	<! -- CONTACT SEPARATOR -->
+
+	
+	<div id="contactwrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12" style="text-align: center">
+					<p>KungFuror V 0.1 by Violento González </p>
+
+
+
+
+				</div>
+			
+			</div><! --/row -->
+		</div><!-- /container -->
+	</div>
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+
+    <script src="assets/js/jquery-1.9.1.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+
+    <!--las de reloj-->
+    <link rel="stylesheet" href="assets/css/flipclock.css">
+    <script src="assets/js/libs/prefixfree.min.js"></script>
+    <script src="assets/js/flipclock.min.js"></script>
+    <!--las de la musica-->
+    <script src="assets/js/soundmanager2.js"></script>
+    <script type="text/javascript" src="assets/js/listas.js"></script>
+
+
+	<script src="assets/js/classie.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/jquery.stellar.min.js"></script>
+	<script src="assets/js/fancybox/jquery.fancybox.js"></script>
+	<script src="assets/js/main.js"></script>
+
+
+        <script>
+            $(function(){
+                $.stellar({
+                    horizontalScrolling: false,
+                    verticalOffset: 40
+                });
+            });
+        </script>
+
+        <script type="text/javascript">
+            $(function() {
+                //    fancybox
+                jQuery(".fancybox").fancybox();
+            });
+        </script>
+
+
+  </body>
+</html>

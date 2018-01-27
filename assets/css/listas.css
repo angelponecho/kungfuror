@@ -1,0 +1,252 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+
+body{
+	background: #f1f1f1;
+	font: normal 13px Tahoma, Verdana, Arial, sans-serif;
+}
+
+h1{
+	text-shadow: 1px 1px 1px #000;
+	font-size: 22px;
+}
+
+label {
+    color: hsl(0, 0%, 100%);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+
+}
+.well-form {
+    background: rgba(0, 0, 0, 0.85);
+    border: none;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:    0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow:         0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+
+    padding: 40px;
+}
+.well-list {
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow:none;
+    padding: 0;
+}
+
+
+
+#divContenedor{
+	position: absolute;
+	width: 500px;
+	left: 50%;
+	margin-left: -250px;
+	top: 50px;
+}
+	#divInfo{
+		padding: 10px;
+		text-align: center;
+	}
+	#divEjemplo{
+
+	}
+		#divEjemplo select{
+			width: 100%;
+		}
+		#divControles{
+			text-align:left;
+		}
+		#divControles div{
+			margin-bottom:20px;
+		}
+		#divLista{
+			overflow: auto;
+			padding: 0 40px ;
+		}
+
+			#divLista ul{
+				list-style-type: none;
+			}
+				#divLista ul li{
+					   border-radius: 5px;
+   					   margin-top: 5px;
+   					   min-height: 55px;
+    				   padding: 10px;
+				}
+					#divLista ul li:nth-child(odd){
+						background: #444;
+					}
+					#divLista ul li:nth-child(even){
+						background: #333333;
+					}
+                    #divLista ul li .ejercicioNombre{
+                        float: left;
+                        font-family: "Oswald",sans-serif;
+                        font-size: 20px;
+						margin: 3px 10px 0 0;
+						color:#FFF;
+						
+
+                    }
+                    #divLista ul li .ejercicioTiempo, #divLista ul li .ejercicioMin{
+                        float: left;
+                        font-family: "Oswald",sans-serif;
+                        font-size: 20px;
+						font-weight:lighter;
+						color:#F00;
+						margin-top: 3px ;
+						
+
+                    }
+
+					#divLista ul li a.clsEliminarElemento{
+						padding: 0px;
+						background:url(../img/eliminar.png) left no-repeat;
+						width: 30px;
+						height:30px;
+						display: inline-block;
+						margin: 3px 15px 3px 3px;
+						cursor: pointer;
+                        float: left;
+						overflow:hidden;
+
+					}
+						#divLista ul li a.clsEliminarElemento:hover{
+							background:url(../img/eliminar.png) right no-repeat;
+						}
+.clsSalto{
+	clear: both;
+	padding: 3px;
+}
+.clsDerecha {
+		padding-left:10px;
+		padding-right:10px;
+	}
+	.clsDerecha .btn{
+		width:100%;
+		margin-bottom:5px;
+	}
+	.clsDerecha div{
+		padding-left:5px;
+		padding-right:5px;
+	}
+
+#btnEmpezar{
+	
+opacity:0.4;
+}
+#btnPausa{
+
+    opacity:0.4;
+}
+/*barra*/
+#barra{
+	background: none repeat scroll 0 0 #666;
+    border-radius: 5px;
+    display: block;
+    height: 20px;
+    margin-top: 140px;
+    overflow: hidden;
+    width: 500px;
+	background:#666;
+	-webkit-box-shadow: inset 0px 0px 5px 0px rgba(50, 50, 50, 0.85);
+	-moz-box-shadow:    inset 0px 0px 5px 0px rgba(50, 50, 50, 0.85);
+	box-shadow:         inset 0px 0px 5px 0px rgba(50, 50, 50, 0.85);
+}
+.barraTiempo{
+	height:20px;
+	width:100px;
+	display:block;
+	background:#f00;
+	float:left;
+		-webkit-box-shadow: inset 0px 0px 5px 0px rgba(50, 50, 50, 0.85);
+	-moz-box-shadow:    inset 0px 0px 5px 0px rgba(50, 50, 50, 0.85);
+	box-shadow:         inset 0px 0px 5px 0px rgba(50, 50, 50, 0.85);
+
+}
+
+
+
+/* DISEÑO*/
+
+@media (max-width: 600px) {
+
+    .sep {
+        height: 250px!important;
+;
+    }
+
+    #divContenedor{
+        position: absolute;
+        width: 250px;
+        left: 50%;
+        margin-left: -125px;
+        top: 30px;
+    }
+    #barra{
+        width: 250px;
+        margin-top: 60px;
+    }
+    .flip-clock-wrapper ul {
+
+        font-size: 10px !important;
+        height: 30px!important;;
+        width: 30px!important;;
+    }
+    .flip-clock-dot {
+
+        height: 5px!important;;
+        width: 5px!important;;
+    }
+    .flip-clock-wrapper ul {
+
+        font-size: 10px !important;
+        height: 35px!important;
+        width: 25px!important;
+        line-height: 30px!important;;
+    }
+    .flip-clock-dot {
+
+        height: 5px!important;
+        width: 5px!important;
+    }
+
+    .flip-clock-divider {
+        height: 40px!important;
+        width: 15px!important;
+    }
+
+    .flip-clock-divider.hours {
+        display:none!important;
+    }
+    .flip-clock-dot.top {
+        top: 15px!important;
+    }
+    .flip-clock-dot.bottom {
+        bottom: 10px!important;
+    }
+    .flip-clock-wrapper ul li a div div.inn {
+        font-size: 25px!important;
+    }
+	#divLista ul li .ejercicioNombre{
+       	font-size: 14px;
+   		margin: 7px 5px 0 0;
+						
+
+                    }
+	#divLista ul li .ejercicioTiempo, #divLista ul li .ejercicioMin{
+
+		font-size: 14px;
+		margin-top: 7px ;
+		
+
+	}
+}
+
+
+
+
